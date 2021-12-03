@@ -36,28 +36,26 @@ btn.addEventListener('click',function()
                 document.getElementById("comparison").style.display="block"; 
                 document.getElementById("comparison").innerHTML=("the number guessed is bigger than the secret number");
                 document.getElementById("Parg-Attempts").innerHTML=("You have "+ attempts +" attempts left");
-                if(myinput<=0 || myinput>100){
+                if(myinput>100){
                     document.getElementById("comparison").style.display="none"; 
-                    document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100");
+                    document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100<br>"+
+                    "You have "+attempts +" attempts left");
                 }
             }
-            else if(attempts<=0){
-                if(myinput<=0 || myinput>100){
-                    document.getElementById("comparison").style.display="block"; 
-                    document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100");
-                }
-                document.getElementById("comparison").style.display="none"; 
-                document.getElementById("Parg-Attempts").innerHTML=("you have exceeded the number of allowed attempts");
-                // break ;
-            }
-            else if(myinput<=0 || myinput>100){
-                document.getElementById("comparison").style.display="none"; 
-                document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100");
-            }
+            
+            // else if(myinput<=0 || myinput>100){
+            //     document.getElementById("comparison").style.display="none"; 
+            //     document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100");
+            //}
             else{
 
                 document.getElementById("comparison").innerHTML=("the number guessed is smaller than the secret number");
                 document.getElementById("Parg-Attempts").innerHTML=("You have "+attempts +" attempts left");
+                if(myinput<1){
+                    document.getElementById("comparison").style.display="none"; 
+                    document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100<br>"+
+                    "You have "+attempts +" attempts left");
+                }
             }
 
         }
@@ -65,6 +63,12 @@ btn.addEventListener('click',function()
 
             document.getElementById("comparison").innerHTML=("Please Enter A  Number !!");
     
+        }
+        if(attempts<=0){
+            
+            document.getElementById("comparison").style.display="none"; 
+            document.getElementById("Parg-Attempts").innerHTML=("you have exceeded the number of allowed attempts");
+            // break ;
         }
     }
 )
