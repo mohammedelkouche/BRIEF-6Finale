@@ -43,10 +43,6 @@ btn.addEventListener('click',function()
                 }
             }
             
-            // else if(myinput<=0 || myinput>100){
-            //     document.getElementById("comparison").style.display="none"; 
-            //     document.getElementById("Parg-Attempts").innerHTML=("Please enter a number within 1 - 100");
-            //}
             else{
 
                 document.getElementById("comparison").innerHTML=("the number guessed is smaller than the secret number");
