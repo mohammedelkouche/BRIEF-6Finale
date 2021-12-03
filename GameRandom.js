@@ -3,8 +3,17 @@
 var btn =document.getElementById("Guess");
 var Random = Math.floor(Math.random()*100+1);
 var attempts =10 ;
+var game = document.getElementById("Play");
+
+ game.addEventListener('click',function(){
+    // var game = document.getElementById("Play");
+  document.getElementById("Play").style.display="none"; 
+  document.getElementById("ENTER").style.display="block";
+});
+
 btn.addEventListener('click',function()
     {
+        
         var myinput = document.getElementById("input").value;
         if(Number.isInteger(Number(myinput))==true)
         {

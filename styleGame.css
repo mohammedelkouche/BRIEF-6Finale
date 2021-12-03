@@ -36,6 +36,7 @@ li{
 #ENTER{
     /* display: flex;
     justify-items: center; */
+    display: none;
     margin: 30px;
     padding-left: 35%;
 }
